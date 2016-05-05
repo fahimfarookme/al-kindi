@@ -1,14 +1,15 @@
 {
-  "name": "datepicker",
+  "name": "al-kindi-datepicker",
   "description": "A simple jQuery datepicker plugin.",
   "main": [
     "dist/datepicker.js",
     "dist/datepicker.css"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/fengyuanchen/datepicker",
+  "homepage": "https://github.com/fahimfarookme/datepicker.git",
   "authors": [
-    "Fengyuan Chen"
+    "Fengyuan Chen",
+    "Fahim Farook"
   ],
   "keywords": [
     "date",
