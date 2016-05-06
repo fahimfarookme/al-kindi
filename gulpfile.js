@@ -4,29 +4,29 @@ var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 var pkg = require('./package');
 var scripts = {
-      name: 'datepicker.js',
-      min: 'datepicker.min.js',
+      name: 'al-kindi.js',
+      min: 'al-kindi.min.js',
       all: [
         'gulpfile.js',
-        'src/datepicker.js',
+        'src/al-kindi.js',
         'demo/js/main.js',
         'docs/js/main.js',
         'test/*.js'
       ],
       docs: 'docs/js',
       site: '_gh_pages/js',
-      src: 'src/datepicker.js',
+      src: 'src/al-kindi.js',
       dest: 'dist'
     };
 var styles = {
-      name: 'datepicker.css',
-      min: 'datepicker.min.css',
+      name: 'al-kindi.css',
+      min: 'al-kindi.min.css',
       all: [
-        'dist/datepicker.css',
+        'dist/al-kindi.css',
         'demo/css/main.css',
         'docs/css/main.css'
       ],
-      main: 'dist/datepicker.css',
+      main: 'dist/al-kindi.css',
       docs: 'docs/css',
       site: '_gh_pages/css',
       src: 'src/*.scss',

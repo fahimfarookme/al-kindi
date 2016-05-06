@@ -1,12 +1,12 @@
 {
-  "name": "al-kindi-datepicker",
+  "name": "al-kindi",
   "description": "A simple jQuery datepicker plugin.",
   "main": [
-    "dist/datepicker.js",
-    "dist/datepicker.css"
+    "dist/al-kindi.js",
+    "dist/al-kindi.css"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/fahimfarookme/datepicker.git",
+  "homepage": "https://github.com/fahimfarookme/al-kindi.git",
   "authors": [
     "Fengyuan Chen",
     "Fahim Farook"
