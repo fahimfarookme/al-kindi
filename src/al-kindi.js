@@ -68,7 +68,7 @@
   var calendarId = -1;
 
   function calId() {
-    return "cal-" + ++calendarId;
+    return 'cal-' + ++calendarId;
   }
 
   function typeOf(obj) {
@@ -332,26 +332,26 @@
       var $this = this.$element;
 
       if ($.isFunction(options.show)) {
-        $this.on(EVENT_SHOW + "." + options.calId, options.show);
+        $this.on(EVENT_SHOW + '.' + options.calId, options.show);
       }
 
       if ($.isFunction(options.hide)) {
-        $this.on(EVENT_HIDE + "." + options.calId, options.hide);
+        $this.on(EVENT_HIDE + '.' + options.calId, options.hide);
       }
 
       if ($.isFunction(options.pick)) {
-        $this.on(EVENT_PICK + "." + options.calId, options.pick);
+        $this.on(EVENT_PICK + '.' + options.calId, options.pick);
       }
 
       if (this.isInput) {
-        $this.on(EVENT_KEYUP + "." + options.calId, $.proxy(this.keyup, this));
+        $this.on(EVENT_KEYUP + '.' + options.calId, $.proxy(this.keyup, this));
 
         if (!options.trigger) {
-          $this.on(EVENT_FOCUS + "." + options.calId, $.proxy(this.show, this));
+          $this.on(EVENT_FOCUS + '.' + options.calId, $.proxy(this.show, this));
         }
       }
 
-      this.$trigger.on(EVENT_CLICK + "." + options.calId, $.proxy(this.show, this));
+      this.$trigger.on(EVENT_CLICK + '.' + options.calId, $.proxy(this.show, this));
     },
 
     unbind: function () {
@@ -359,26 +359,26 @@
       var $this = this.$element;
 
       if ($.isFunction(options.show)) {
-        $this.off(EVENT_SHOW + "." + options.calId, options.show);
+        $this.off(EVENT_SHOW + '.' + options.calId, options.show);
       }
 
       if ($.isFunction(options.hide)) {
-        $this.off(EVENT_HIDE + "." + options.calId, options.hide);
+        $this.off(EVENT_HIDE + '.' + options.calId, options.hide);
       }
 
       if ($.isFunction(options.pick)) {
-        $this.off(EVENT_PICK + "." + options.calId, options.pick);
+        $this.off(EVENT_PICK + '.' + options.calId, options.pick);
       }
 
       if (this.isInput) {
-        $this.off(EVENT_KEYUP + "." + options.calId, this.keyup);
+        $this.off(EVENT_KEYUP + '.' + options.calId, this.keyup);
 
         if (!options.trigger) {
-          $this.off(EVENT_FOCUS + "." + options.calId, this.show);
+          $this.off(EVENT_FOCUS + '.' + options.calId, this.show);
         }
       }
 
-      this.$trigger.off(EVENT_CLICK + "." + options.calId, this.show);
+      this.$trigger.off(EVENT_CLICK + '.' + options.calId, this.show);
     },
 
     showView: function (view) {
@@ -476,7 +476,7 @@
 
     // A shortcut for triggering custom events
     trigger: function (type, data) {
-      var e = $.Event(type + "." + this.options.calId, data);
+      var e = $.Event(type + '.' + this.options.calId, data);
 
       this.$element.trigger(e);
 
@@ -976,7 +976,7 @@
     },
 
     setId: function () {
-      this.options.calId && this.$picker.attr("data-cal-id", this.options.calId);
+      this.options.calId && this.$picker.attr('data-cal-id', this.options.calId);
     },
 
     toggleActive: function () {
@@ -1078,12 +1078,12 @@
       }
 
       this.isShown = true;
-      this.$picker.removeClass(CLASS_HIDE).on(EVENT_CLICK + "." + this.options.calId, $.proxy(this.click, this));
+      this.$picker.removeClass(CLASS_HIDE).on(EVENT_CLICK + '.' + this.options.calId, $.proxy(this.click, this));
       this.showView(this.options.startView);
 
       if (!this.isInline) {
-        $window.on(EVENT_RESIZE + "." + this.options.calId, (this._place = proxy(this.place, this)));
-        $document.on(EVENT_CLICK + "." + this.options.calId, (this._clickDoc = proxy(this.clickDoc, this)));
+        $window.on(EVENT_RESIZE + '.' + this.options.calId, (this._place = proxy(this.place, this)));
+        $document.on(EVENT_CLICK + '.' + this.options.calId, (this._clickDoc = proxy(this.clickDoc, this)));
         this.place();
       }
     },
@@ -1511,11 +1511,11 @@
               options.startDate = formatDate(new Date(year, ++month, 1), format);
             }
             options.calId = calId();
-            $this.data(NAMESPACE + "." + options.calId, (data = new Datepicker(this, options)));
+            $this.data(NAMESPACE + '.' + options.calId, (data = new Datepicker(this, options)));
           }
         } else {
           options.calId = calId();
-          $this.data(NAMESPACE + "." + options.calId, (data = new Datepicker(this, options)));
+          $this.data(NAMESPACE + '.' + options.calId, (data = new Datepicker(this, options)));
         }
       } else if (data && $.isFunction(fn = data[option])) {
         result = fn.apply(data, args);
