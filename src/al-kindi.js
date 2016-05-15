@@ -1548,7 +1548,9 @@
     init: function() {
       this.pickers = this._input.data(NAMESPACE) || [];
       for (var i = 0, len = this.pickers.length; i < len; i++) {
-        if (i > 0) {
+        if (i == 0) {
+          this.pickers[i].setActive(true);
+        } else {
           this.day(this.pickers[i]);
         }
       }
