@@ -1,11 +1,11 @@
 /*!
- * Datepicker v3.0.3
+ * Datepicker v3.0.4
  * https://github.com/fengyuanchen/datepicker
  *
  * Copyright (c) 2014-2017 Fengyuan Chen
  * Released under the MIT license
  *
- * Date: 2017-02-26T18:27:37.730Z
+ * Date: 2017-02-26T18:30:16.941Z
  */
 
 (function(factory) {
